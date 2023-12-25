@@ -3,14 +3,6 @@
 version = 3
 
 [[package]]
-name = "Rust"
-version = "0.75.0"
-dependencies = [
- "itertools",
- "proconio",
-]
-
-[[package]]
 name = "either"
 version = "1.9.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -30,3 +22,11 @@ name = "proconio"
 version = "0.4.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "0eb404616795079e2390e7115acf0ada24e9332e8476de2aada7bacb9992dc9e"
+
+[[package]]
+name = "rust-lib"
+version = "0.75.0"
+dependencies = [
+ "itertools",
+ "proconio",
+]

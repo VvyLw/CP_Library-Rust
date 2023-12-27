@@ -1,4 +1,5 @@
 #![allow(unused_macros)]
+#![allow(unused_imports)]
 macro_rules! out {
     ($x:expr) => {
         println!("{}", $x)
@@ -75,7 +76,6 @@ const dy: [i32; 9] = [0, 0, 0, -1, 1, -1, 1, -1, 1];
 
 #[allow(dead_code)]
 mod union_find;
-#[allow(unused_imports)]
 use union_find::*;
 
 #[cfg(test)]

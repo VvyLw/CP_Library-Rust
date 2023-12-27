@@ -40,9 +40,7 @@ impl UnionFind {
         for i in 0..n {
             res[self.root(i)].push(i);
         }
-        res.into_iter()
-            .filter(|g| !g.is_empty())
-            .collect::<Vec<Vec<usize>>>()
+        res.into_iter().filter(|g| !g.is_empty()).collect()
     }
 }
 

@@ -1,8 +1,8 @@
 #![allow(unused_imports)]
-#[allow(dead_code)]
-mod union_find;
-use union_find::*;
-use crate::dsu::DSU;
+mod ds;
+use crate::ds::uf::dsu::DSU;
+use crate::ds::uf::union_find::*;
+use crate::ds::uf::uf_with_potential::*;
 
 #[cfg(test)]
 mod tests {

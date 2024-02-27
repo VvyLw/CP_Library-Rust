@@ -2,11 +2,11 @@
 #[allow(dead_code)]
 mod union_find;
 use union_find::*;
+use crate::dsu::DSU;
 
 #[cfg(test)]
 mod tests {
     use super::*;
-
     #[test]
     fn uf_test1() {
         let mut uf = UnionFind::new(4);
@@ -39,5 +39,19 @@ mod tests {
         uf.unite(1 + n, 2);
         uf.unite(1, 2 + n);
         assert!(is_bipartite(uf));
+    }
+
+    #[test]
+    fn potential_uf_test() {
+        let n: usize = 5;
+        let mut uf = WeightedUnionFind::new(n);
+        uf.unite(0, 2, 5);
+        uf.unite(1, 2, 3);
+        assert!(uf.same(0, 1));
+        assert_eq!(uf.diff(0, 1), 2);
+        assert!(!uf.same(1, 3));
+        uf.unite(1, 4, 8);
+        assert!(uf.same(0, 4));
+        assert_eq!(uf.diff(0, 4), 10);
     }
 }

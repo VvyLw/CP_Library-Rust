@@ -28,9 +28,6 @@ impl DSU for WeightedUnionFind {
     fn unite(&mut self, i: usize, j: usize) -> bool {
         self.unite(i, j, 0) > 0
     }
-    fn same(&mut self, i: usize, j: usize) -> bool {
-        self.root(i) == self.root(j)
-    }
     fn groups(&mut self) -> Vec<Vec<usize>> {
         let n = self.par.len();
         let mut res = vec![Vec::new(); n];

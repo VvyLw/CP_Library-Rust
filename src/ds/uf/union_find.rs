@@ -32,9 +32,6 @@ impl DSU for UnionFind {
         self.par[j] = i as i32;
         true
     }
-    fn same(&mut self, i: usize, j: usize) -> bool {
-        self.root(i) == self.root(j)
-    }
     fn groups(&mut self) -> Vec<Vec<usize>> {
         let n = self.par.len();
         let mut res = vec![Vec::new(); n];
